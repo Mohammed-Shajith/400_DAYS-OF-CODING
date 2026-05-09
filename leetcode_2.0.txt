@@ -922,3 +922,62 @@ public:
         return -1;
     }
 };
+
+09/05
+#   1914. Cyclically Rotating a Grid
+
+class Solution:
+    def rotateGrid(self, grid, k):
+
+        n = len(grid)
+        m = len(grid[0])
+
+        startingRow = 0
+        startingCol = 0
+        endingRow = n - 1
+        endingCol = m - 1
+
+        while startingRow < endingRow and startingCol < endingCol:
+
+            layer = []
+
+            for i in range(startingRow, endingRow + 1):
+                layer.append(grid[i][startingCol])
+
+            for i in range(startingCol + 1, endingCol + 1):
+                layer.append(grid[endingRow][i])
+
+            for i in range(endingRow - 1, startingRow - 1, -1):
+                layer.append(grid[i][endingCol])
+
+            for i in range(endingCol - 1, startingCol, -1):
+                layer.append(grid[startingRow][i])
+
+            rotations = k % len(layer)
+
+            layer = layer[-rotations:] + layer[:-rotations]
+
+            idx = 0
+
+            for i in range(startingRow, endingRow + 1):
+                grid[i][startingCol] = layer[idx]
+                idx += 1
+
+            for i in range(startingCol + 1, endingCol + 1):
+                grid[endingRow][i] = layer[idx]
+                idx += 1
+
+            for i in range(endingRow - 1, startingRow - 1, -1):
+                grid[i][endingCol] = layer[idx]
+                idx += 1
+
+            for i in range(endingCol - 1, startingCol, -1):
+                grid[startingRow][i] = layer[idx]
+                idx += 1
+
+            startingRow += 1
+            startingCol += 1
+            endingRow -= 1
+            endingCol -= 1
+
+        return grid
