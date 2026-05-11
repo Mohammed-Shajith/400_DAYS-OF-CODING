@@ -997,3 +997,10 @@ class Solution:
                     dp[i] = max(dp[i], dp[j] + 1)
 
         return dp[-1]
+
+11/05
+#   2553. Separate the Digits in an Array
+
+class Solution:
+    def separateDigits(self, nums):
+        return [int(c) for x in nums for c in str(x)]
