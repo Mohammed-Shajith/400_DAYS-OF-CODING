@@ -1044,3 +1044,22 @@ class Solution(object):
             if oprs<min_ops:
                 min_ops=oprs
         return min_ops
+
+14/05
+#   2784. Check if Array is Good
+
+class Solution(object):
+    def isGood(self, nums):
+        
+        if not nums:
+            return False
+            
+        n = max(nums)
+        
+        if len(nums) != n + 1:
+            return False
+        expected = list(range(1, n)) + [n, n]
+        
+        nums.sort()
+        
+        return nums == expected
