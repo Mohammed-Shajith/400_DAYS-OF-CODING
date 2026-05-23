@@ -1297,3 +1297,19 @@ class Solution(object):
         if target not in nums:
             return -1
         return nums.index(target)
+
+23/05
+#   1752. Check if Array Is Sorted and Rotated
+
+class Solution:
+    def check(self, nums):
+        countDrops = 0
+        n = len(nums)
+
+        for i in range(n):
+            if nums[i] > nums[(i + 1) % n]:
+                countDrops += 1
+            if countDrops > 1:
+                return False
+        
+        return True
