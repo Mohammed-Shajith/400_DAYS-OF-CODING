@@ -1313,3 +1313,31 @@ class Solution:
                 return False
         
         return True
+24/05
+#  1340. Jump Game V
+
+class Solution:
+    def maxJumps(self, arr, d):
+        n = len(arr)
+        memo = {}
+        
+        def dfs(i):
+            if i in memo:
+                return memo[i]
+                
+            max_jumps = 1
+            
+            for x in range(1, d + 1):
+                if i + x >= n or arr[i + x] >= arr[i]:
+                    break
+                max_jumps = max(max_jumps, 1 + dfs(i + x))
+                
+            for x in range(1, d + 1):
+                if i - x < 0 or arr[i - x] >= arr[i]:
+                    break
+                max_jumps = max(max_jumps, 1 + dfs(i - x))
+                
+            memo[i] = max_jumps
+            return max_jumps
+
+        return max(dfs(i) for i in range(n))
