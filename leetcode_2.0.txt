@@ -1446,3 +1446,20 @@ class Solution(object):
             res.append(find(word[::-1]))
 
         return res
+29/05
+#   3300. Minimum Element After Replacement With Digit Sum
+
+class Solution:
+    def minElement(self, nums):
+        def countedValue(n):
+            s = 0
+            while n > 0:
+                s += n % 10
+                n //= 10
+            return s
+
+        ans = float('inf')
+        for x in nums:
+            ans = min(ans, countedValue(x))
+
+        return ans
