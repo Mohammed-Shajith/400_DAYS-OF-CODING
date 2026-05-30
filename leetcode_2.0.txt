@@ -1463,3 +1463,48 @@ class Solution:
             ans = min(ans, countedValue(x))
 
         return ans
+
+30/05
+#   3161. Block Placement Queries
+
+class BIT: 
+    def __init__(self, size):
+        self.tree = [0]*(size+1)
+    def update_max(self, idx, value):
+        while idx < len(self.tree):
+            self.tree[idx] = max(self.tree[idx], value) 
+            idx += idx & -idx
+    def query_max(self, idx):
+        result = 0
+        while idx > 0:
+            result = max(result, self.tree[idx])      
+            idx -= idx & -idx
+        return result
+class Solution:
+    def getResults(self, actions):  
+        limit = min(50000, len(actions)*3)  
+        results = []
+        bit = BIT(limit+1)       
+        marks = SortedList([0, limit])       
+        for act in actions:
+            kind = act[0]
+            if kind == 1:
+                pos = act[1]
+                marks.add(pos)          
+        for a,b in zip(marks, marks[1:]):
+            bit.update_max(b, b-a)           
+        for act in reversed(actions):
+            kind = act[0]
+            pos = act[1]
+            if kind == 1:          
+                idx = marks.index(pos)
+                after = marks[idx+1]
+                before = marks[idx-1]
+                marks.remove(pos)
+                bit.update_max(after, after-before)  
+            else:           
+                size_needed = act[2]
+                idx = marks.bisect_right(pos)
+                last_mark = marks[idx-1]
+                results.append(bit.query_max(last_mark)>=size_needed or pos-last_mark>=size_needed)
+        return results[::-1] 
