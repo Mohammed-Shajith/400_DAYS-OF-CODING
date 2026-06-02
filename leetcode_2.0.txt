@@ -1524,5 +1524,39 @@ class Solution(object):
 
         return True
 
-01/06
-#   2144. Minimum Cost of Buying Candies With Discount
+02/06
+#   242. Valid Anagram
+
+class Solution(object):
+    def isAnagram(self, s, t):
+        countS = {}
+        countT = {}
+        if len(s) != len(t):
+            return False
+        
+        for i in range (len(s)):
+            countS[s[i]] = countS.get(s[i],0) +1
+            countT[t[i]] = countT.get(t[i],0) +1
+
+        return countS == countT
+
+#   3633. Earliest Finish Time for Land and Water Rides I
+
+class Solution:
+    def earliestFinishTime(self, landStartTime, landDuration,
+                           waterStartTime, waterDuration):
+
+        ans = float('inf')
+
+        for i in range(len(landStartTime)):
+            for j in range(len(waterStartTime)):
+
+                land_finish = landStartTime[i] + landDuration[i]
+                finish1 = max(land_finish, waterStartTime[j]) + waterDuration[j]
+
+                water_finish = waterStartTime[j] + waterDuration[j]
+                finish2 = max(water_finish, landStartTime[i]) + landDuration[i]
+
+                ans = min(ans, finish1, finish2)
+
+        return ans
