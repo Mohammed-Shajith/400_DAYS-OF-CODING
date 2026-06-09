@@ -1765,3 +1765,9 @@ class Solution:
                 m+=1
         return nums[:l]+[pivot]*m+R
         
+09/06
+#   3689. Maximum Total Subarray Value I
+
+class Solution:
+    def maxTotalValue(self, nums: List[int], k: int) -> int:
+        return (max(nums)-min(nums))*k
