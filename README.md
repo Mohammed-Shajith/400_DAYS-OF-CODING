@@ -383,6 +383,7 @@ I update this repo daily with my solution for each day.
 | 351 |     leetcode      |   py       | leetcode_2.0.txt | 19/06|
 | 352 |     leetcode      |   py       | leetcode_2.0.txt | 20/06|
 | 353 |     leetcode      |   py       | leetcode_2.0.txt | 21/06|
+| 354 |     leetcode      |   py       | leetcode_2.0.txt | 22/06|
 
 
 
