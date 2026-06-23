@@ -2043,3 +2043,20 @@ class Solution:
 class Solution:
     def maxNumberOfBalloons(self, text: str) -> int:
         return min((f:=Counter(text))['a'], f['b'], f['l']//2, f['o']//2, f['n'] )
+
+23/06
+#  3699. Number of ZigZag Arrays I
+
+class Solution:
+    def zigZagArrays(self, n: int, l: int, r: int) -> int:
+        MOD = 1000000007
+        m = r - l + 1
+        dp = [1] * m
+
+        for i in range(2, n + 1):
+            dp.reverse()
+            s = 0
+            for j in range(m):
+                dp[j], s = s, (s + dp[j]) % MOD
+
+        return (sum(dp) % MOD << 1) % MOD
