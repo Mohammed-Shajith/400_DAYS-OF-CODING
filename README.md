@@ -1,7 +1,7 @@
-# 200 Days of Coding Challenge
+# 400 Days of Coding Challenge
 
-Welcome to my **200 Days of Coding Challenge** repository! 
-I'm committing to solving coding problems **every day for 100 days** to improve my skills, stay consistent, and prepare for interviews or competitions.
+Welcome to my **400 Days of Coding Challenge** repository! 
+I'm committing to solving coding problems **every day for 400 days** to improve my skills, stay consistent, and prepare for interviews or competitions.
 
 ##  About the Challenge
 
