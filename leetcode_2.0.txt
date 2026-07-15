@@ -2687,3 +2687,10 @@ class Solution:
             ans = (ans + dp[g][g]) % MOD
 
         return ans
+
+15/07
+#  3658. GCD of Odd and Even Sums
+
+class Solution:
+    def gcdOfOddEvenSums(self, n: int) -> int:
+        return n
