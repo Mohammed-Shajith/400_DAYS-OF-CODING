@@ -409,7 +409,10 @@ I update this repo daily with my solution for each day.
 | 377 |     leetcode      |   py       | leetcode_2.0.txt | 15/07|
 | 378 |     leetcode      |   py       | leetcode_2.0.txt | 16/07|
 | 379 |     leetcode      |   py       | leetcode_2.0.txt | 17/07|
-|380|
+| 380 |     leetcode      |   py       | leetcode_2.0.txt | 18/07|
+| 381 |     leetcode      |   py       | leetcode_2.0.txt | 19/07|
+
+
 
 
 
