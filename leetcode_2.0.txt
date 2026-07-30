@@ -3121,3 +3121,13 @@ class Solution:
             ans[n - 1 - i] = ans[i]
 
         return "".join(ans)
+
+30/07
+# 3014. Minimum Number of Pushes to Type Word I
+
+class Solution:
+    def minimumPushes(self, word: str) -> int:
+        pushes = 0
+        for i in range(len(word)):
+            pushes += (i // 8) + 1
+        return pushes
