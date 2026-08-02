@@ -3178,3 +3178,10 @@ class Solution:
                        A[j] - maxDiff(i, j - 1))
 
         return maxDiff(0, n - 1) >= 0
+
+01/08
+# 877. Stone Game
+
+class Solution:
+    def stoneGame(self, piles: List[int]) -> bool:
+        return True
