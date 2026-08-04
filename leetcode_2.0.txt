@@ -3210,3 +3210,21 @@ class Solution:
 
         d = maxDiff(0)
         return self.s[(d > 0) - (d < 0) + 1]
+
+04/08
+# 3731. Find Missing Elements
+
+class Solution:
+    def findMissingElements(self, nums: List[int]) -> List[int]:
+        seen = set(nums)
+
+        mn = min(nums)
+        mx = max(nums)
+
+        ans = []
+
+        for x in range(mn, mx + 1):
+            if x not in seen:
+                ans.append(x)
+
+        return ans
