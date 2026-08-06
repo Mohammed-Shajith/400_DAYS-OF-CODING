@@ -3253,3 +3253,20 @@ class Solution:
             return list(range(n))
         return [i for i in range(n) if not vis[i]]
         
+06/08
+# 3345. Smallest Divisible Digit Product I
+
+class Solution:
+    def smallestNumber(self, n: int, t: int) -> int:
+        while True:
+            product = 1
+            x = n
+
+            while x > 0:
+                product *= x % 10
+                x //= 10
+
+            if product % t == 0:
+                return n
+
+            n += 1
