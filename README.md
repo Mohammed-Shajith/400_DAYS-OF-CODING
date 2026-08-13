@@ -435,6 +435,7 @@ I update this repo daily with my solution for each day.
 | 403 |     leetcode      |   py       | leetcode_2.0.txt | 10/08|
 | 404 |     leetcode      |   py       | leetcode_2.0.txt | 11/08|
 | 405 |     leetcode      |   py       | leetcode_2.0.txt | 12/08|
+| 406 |     leetcode      |   py       | leetcode_2.0.txt | 13/08|
 
 
 
