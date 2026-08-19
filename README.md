@@ -441,6 +441,7 @@ I update this repo daily with my solution for each day.
 | 409 |     leetcode      |   py       | leetcode_2.0.txt | 16/08|
 | 410 |     leetcode      |   py       | leetcode_2.0.txt | 17/08|
 | 411 |     leetcode      |   py       | leetcode_2.0.txt | 18/08|
+| 412 |     leetcode      |   py       | leetcode_2.0.txt | 19/08|
 
 
 
