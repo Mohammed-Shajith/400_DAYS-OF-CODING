@@ -3923,3 +3923,16 @@ class Solution:
         for i in range(n - 2, 0, -1):
             best = max(best, stones[i] - best)
         return best
+
+25/08
+# 3718. Smallest Missing Multiple of K
+
+class Solution:
+    def missingMultiple(self, nums: List[int], k: int) -> int:
+        x = 0
+        for n in nums:
+            if not (n % k):
+                i = (n // k) - 1
+                x |= 1 << i
+
+        return ((x + 1) & ~x).bit_length() * k
