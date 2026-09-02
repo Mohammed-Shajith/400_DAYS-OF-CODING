@@ -4235,3 +4235,9 @@ class Solution:
                 queue.append((nr, nc, nmask, ne, moves + 1))
 
         return -1
+02/09
+# 3875. Construct Uniform Parity Array I
+
+class Solution:
+    def uniformArray(self, nums1: list[int]) -> bool:
+        return True
