@@ -4241,3 +4241,10 @@ class Solution:
 class Solution:
     def uniformArray(self, nums1: list[int]) -> bool:
         return True
+
+03/09
+# 3876. Construct Uniform Parity Array II
+
+class Solution:
+    def uniformArray(self, A: list[int]) -> bool:
+        return not (min(A) ^ reduce(or_, A)) & 1
