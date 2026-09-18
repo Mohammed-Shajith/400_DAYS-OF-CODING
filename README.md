@@ -470,6 +470,7 @@ I update this repo daily with my solution for each day.
 | 438 |     leetcode      |   py       | leetcode_2.0.txt | 15/09|
 | 439 |     leetcode      |   py       | leetcode_2.0.txt | 16/09|
 | 440 |     leetcode      |   py       | leetcode_2.0.txt | 17/09|
+| 441 |     leetcode      |   py       | leetcode_2.0.txt | 18/09|
 
 
 
