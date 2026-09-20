@@ -4567,7 +4567,7 @@ class Solution:
                 queue.clear()
 
         return res
-19/08
+19/09
 # 1401. Circle and Rectangle Overlapping
 
 class Solution:
@@ -4576,3 +4576,16 @@ class Solution:
         y = max(y1, min(cy, y2)) - cy
 
         return x * x + y * y <= r * r
+
+20/09
+# 3498. Reverse Degree of a String
+
+class Solution:
+    def reverseDegree(self, s: str) -> int:
+        total = 0
+        for i, c in enumerate(s):
+            reverse_value = 26 - (ord(c) - ord('a'))
+            position = i + 1
+
+            total += reverse_value * position
+        return total
