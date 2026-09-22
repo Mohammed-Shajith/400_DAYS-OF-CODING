@@ -474,6 +474,7 @@ I update this repo daily with my solution for each day.
 | 442 |     leetcode      |   py       | leetcode_2.0.txt | 19/09|
 | 443 |     leetcode      |   py       | leetcode_2.0.txt | 20/09|
 | 444 |     leetcode      |   py       | leetcode_2.0.txt | 21/09|
+| 445 |     leetcode      |   py       | leetcode_2.0.txt | 22/09|
 
 
 
