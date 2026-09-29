@@ -481,6 +481,7 @@ I update this repo daily with my solution for each day.
 | 449 |     leetcode      |   py       | leetcode_2.0.txt | 26/09|
 | 450 |     leetcode      |   py       | leetcode_2.0.txt | 27/09|
 | 451 |     leetcode      |   py       | leetcode_2.0.txt | 28/09|
+| 452 |     leetcode      |   py       | leetcode_2.0.txt | 29/09|
 
 
 
