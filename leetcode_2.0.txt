@@ -4834,3 +4834,15 @@ class Solution:
                    (j < n - 1 and dfs(i, j + 1, x))
 
         return dfs(0, 0, 0)
+
+30/09
+# 1111. Maximum Nesting Depth of Two Valid Parentheses Strings
+
+class Solution:
+    def maxDepthAfterSplit(self, seq: str) -> list[int]:
+        res = []
+
+        for i in range(len(seq)):
+            res.append((i ^ ord(seq[i])) & 1)
+
+        return res
