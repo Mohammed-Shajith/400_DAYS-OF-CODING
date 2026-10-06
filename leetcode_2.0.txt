@@ -4951,3 +4951,17 @@ class Solution:
                 if s[i - 1] == '(':
                     score += 1 << depth
         return score
+
+06/09
+# 921. Minimum Add to Make Parentheses Valid
+
+class Solution:
+    def minAddToMakeValid(self, s: str) -> int:
+        opened = added = 0
+        for ch in s:
+            if ch == "(":
+                opened += 1
+            elif opened: 
+                opened -= 1
+            else:  
+        return added + opened  
