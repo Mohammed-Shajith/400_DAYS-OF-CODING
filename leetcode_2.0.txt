@@ -5155,3 +5155,19 @@ class Solution:
         if sum > 9 * num:
             return ""
         return '9' * (sum // 9) + str(sum % 9) * (sum % 9 > 0) + '0' * (num - (sum + 8) // 9)
+
+15/10
+# 2913. Subarrays Distinct Element Sum of Squares I
+
+class Solution:
+    def sumCounts(self, nums: list[int]) -> int:
+        n, ans = len(nums), 0
+        for i in range(n):
+            seen = [False] * 101
+            distinct = 0
+            for j in range(i, n):
+                if not seen[nums[j]]:
+                    seen[nums[j]] = True
+                    distinct += 1
+                ans += distinct * distinct
+        return ans
