@@ -5272,3 +5272,10 @@ class Solution:
                 else: right.append(y)
             return Subproblem(right)*Subproblem(left)%Mod*math.comb(len(nums)-1, len(left))%Mod
         return int((Subproblem(nums)-1)%Mod)
+
+19/10
+# 2089. Find Target Indices After Sorting Array
+
+class Solution:
+    def targetIndices(self, nums: list[int], target: int) -> list[int]:
+        return list(range((s:=sum(x<target for x in nums)), s+nums.count(target)))      
