@@ -503,6 +503,7 @@ I update this repo daily with my solution for each day.
 | 471 |     leetcode      |   py       | leetcode_2.0.txt | 18/10|
 | 472 |     leetcode      |   py       | leetcode_2.0.txt | 19/10|
 | 473 |     leetcode      |   py       | leetcode_2.0.txt | 20/10|
+| 474 |     leetcode      |   py       | leetcode_2.0.txt | 21/10|
 
 
 
