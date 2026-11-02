@@ -5608,3 +5608,15 @@ class Solution:
 class Solution:
     def minMoves(self, nums: List[int]) -> int:
         return sum(nums) - len(nums) * min(nums)
+
+02/11
+# 462. Minimum Moves to Equal Array Elements II
+
+class Solution:
+    def minMoves2(self, nums: list[int]) -> int:
+        nums.sort()
+        median = nums[len(nums) // 2]
+        moves = 0
+        for num in nums:
+            moves += abs(num - median)
+        return moves
