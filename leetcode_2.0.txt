@@ -5620,3 +5620,9 @@ class Solution:
         for num in nums:
             moves += abs(num - median)
         return moves
+
+03/11
+# 3736. Minimum Moves to Equal Array Elements III
+class Solution: 
+    def minMoves(self, nums: List[int]) -> int:
+        return len(nums) * max(nums) - sum(nums)
