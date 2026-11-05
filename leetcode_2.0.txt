@@ -5687,3 +5687,27 @@ class Solution:
                 cur[i] = a if a < b else b
             prev = cur
         return prev[n]
+
+05/11
+# 1385. Find the Distance Value Between Two Arrays
+
+class Solution:
+    def findTheDistanceValue(self, arr1: List[int], arr2: List[int], d: int) -> int:
+        arr2.sort()
+        ans = 0
+
+        for num in arr1:
+            valid, l, r = False, -1, len(arr2)
+            while r - l > 1:
+                mid = l + (r - l) // 2
+                if abs(num - arr2[mid]) <= d:
+                    valid = True
+                    break
+                elif arr2[mid] < num:
+                    l = mid
+                else:
+                    r = mid
+            if not valid:
+                ans += 1
+
+        return ans
