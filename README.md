@@ -518,6 +518,7 @@ I update this repo daily with my solution for each day.
 | 486 |     leetcode      |   py       | leetcode_2.0.txt | 02/11|
 | 487 |     leetcode      |   py       | leetcode_2.0.txt | 03/11|
 | 488 |     leetcode      |   py       | leetcode_2.0.txt | 04/11|
+| 489 |     leetcode      |   py       | leetcode_2.0.txt | 05/11|
 
 
 
