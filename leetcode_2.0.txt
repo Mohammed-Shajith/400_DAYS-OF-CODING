@@ -5711,3 +5711,37 @@ class Solution:
                 ans += 1
 
         return ans
+
+06/11
+# 2747. Count Zero Request Servers
+
+class Solution:
+    def countServers(self, n: int, logs: List[List[int]], x: int, queries: List[int]) -> List[int]:
+        logs.sort(key=lambda log: log[1])
+        ordered_queries = sorted((q, i) for i, q in enumerate(queries))
+
+        frequency = [0] * (n + 1)
+        active = 0
+        left = right = 0
+        answer = [0] * len(queries)
+
+        for q, original_index in ordered_queries:
+            lower = q - x
+
+            while right < len(logs) and logs[right][1] <= q:
+                server = logs[right][0]
+                if frequency[server] == 0:
+                    active += 1
+                frequency[server] += 1
+                right += 1
+
+            while left < right and logs[left][1] < lower:
+                server = logs[left][0]
+                frequency[server] -= 1
+                if frequency[server] == 0:
+                    active -= 1
+                left += 1
+
+            answer[original_index] = n - active
+
+        return answer
