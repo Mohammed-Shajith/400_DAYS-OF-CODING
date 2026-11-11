@@ -5826,3 +5826,27 @@ class Solution:
             cur = min(p1 + 1, p2 + 4, p3 + 9) + costs[i - 1]
             p3, p2, p1 = p2, p1, cur
         return p1
+
+11/11
+#  3789. Minimum Cost to Acquire Required Items
+
+class Solution:
+    def minimumCost(self, cost1: int, cost2: int, costBoth: int, need1: int, need2: int) -> int:
+        totalCost = 0
+
+        if cost1 + cost2 <= costBoth:
+            totalCost = cost1 * need1 + cost2 * need2
+        else:
+            cnt_3 = min(need1, need2)
+            totalCost = cnt_3 * costBoth
+
+            need1 -= cnt_3
+            need2 -= cnt_3
+
+            if need1 > 0:
+                totalCost += need1 * min(cost1, costBoth)
+
+            elif need2 > 0:
+                totalCost += need2 * min(cost2, costBoth)
+
+        return totalCost
