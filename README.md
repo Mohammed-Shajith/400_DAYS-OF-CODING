@@ -527,6 +527,7 @@ I update this repo daily with my solution for each day.
 | 495 |     leetcode      |   py       | leetcode_2.0.txt | 11/11|
 | 496 |     leetcode      |   py       | leetcode_2.0.txt | 12/11|
 | 497 |     leetcode      |   py       | leetcode_2.0.txt | 13/11|
+| 498 |     leetcode      |   py       | leetcode_2.0.txt | 14/11|
 
 
 
