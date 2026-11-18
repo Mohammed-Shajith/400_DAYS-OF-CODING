@@ -5977,3 +5977,14 @@ class Solution:
                     if prev <= i - 2 and dp[prev][p - 1] != INF and cost[prev][i - 1] != INF:
                         dp[i][p] = min(dp[i][p], dp[prev][p - 1] + cost[prev][i - 1])
         return dp[n][k]
+
+18/11
+# 2914. Minimum Number of Changes to Make Binary String Beautiful
+
+class Solution:
+    def minChanges(self, s: str) -> int:
+        changes = 0
+        for i in range(0, len(s), 2):
+            if s[i] != s[i + 1]:
+                changes += 1
+        return changes
