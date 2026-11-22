@@ -6054,3 +6054,11 @@ class Solution:
 
         calc(0)
         return ans
+
+22/11
+# 2124. Check if All A's Appears Before All B's
+
+class Solution:
+    def checkString(self, s: str) -> bool:
+        s1 = "".join(sorted(s))
+        return s1 == s
