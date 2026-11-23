@@ -536,6 +536,7 @@ I update this repo daily with my solution for each day.
 | 504 |     leetcode      |   py       | leetcode_2.0.txt | 20/11|
 | 505 |     leetcode      |   py       | leetcode_2.0.txt | 21/11|
 | 506 |     leetcode      |   py       | leetcode_2.0.txt | 22/11|
+| 507 |     leetcode      |   py       | leetcode_2.0.txt | 23/11|
 
 
 
