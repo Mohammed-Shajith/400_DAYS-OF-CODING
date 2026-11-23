@@ -6062,3 +6062,21 @@ class Solution:
     def checkString(self, s: str) -> bool:
         s1 = "".join(sorted(s))
         return s1 == s
+
+23/11
+# 1352. Product of the Last K Numbers
+
+class ProductOfNumbers:
+    def __init__(self):
+        self.prods = [1]
+
+    def add(self, num: int):
+        if num == 0:
+            self.prods = [1]
+        else:
+            self.prods.append(self.prods[-1] * num)
+
+    def getProduct(self, k: int) -> int:
+        if k >= len(self.prods):
+            return 0
+        return self.prods[-1] // self.prods[-1 - k]
